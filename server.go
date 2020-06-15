@@ -10,7 +10,9 @@ import (
 )
 
 func main() {
-	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", 9000))
+	port := 9000
+
+	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 
 	if err != nil {
 		log.Fatal(err)
